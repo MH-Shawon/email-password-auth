@@ -1,5 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
+
 import { createUserWithEmailAndPassword, getAuth } from 'firebase/auth'
 import app from './firebase-init';
 import Form from 'react-bootstrap/Form';
@@ -32,7 +33,7 @@ function App() {
     
     if(!/(?=.*[a-zA-Z >>!#$%&? "<<])[a-zA-Z0-9 >>!#$%&?<< ]/.test(password)){
       return;
-    }
+    };
     setValidated(true);
 
     createUserWithEmailAndPassword(auth, email, password)
